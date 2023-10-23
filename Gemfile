@@ -28,3 +28,5 @@ group :development do
 
 end
 
+
+gem "graphql", "~> 2.1"
