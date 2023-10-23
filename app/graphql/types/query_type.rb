@@ -2,10 +2,15 @@
 
 module Types
   class QueryType < Types::BaseObject
-    field :students, [Types::StudentType]
+    field :students, Types::StudentType
+    field :courses, [Types::CourseType]
 
-      def students
-        Student.all
-      end
+    def students
+      Student.includes(:courses).first
+    end
+
+    def courses
+      Course.all
+    end
   end
 end
