@@ -5,9 +5,5 @@ module Types
         field :id, ID, null: false
         field :name, String
         field :courses, EnrollmentConnection
-
-        def courses
-            object.enrollments.includes(:course)
-        end
     end
 end

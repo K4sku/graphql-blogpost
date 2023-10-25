@@ -6,7 +6,7 @@ module Types
     field :courses, [Types::CourseType]
 
     def students
-      Student.all
+      Student.includes(:courses).all
     end
 
     def courses
