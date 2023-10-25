@@ -2,8 +2,16 @@
 
 module Types
   class QueryType < Types::BaseObject
-    field :students, [Types::StudentType]
-    field :courses, [Types::CourseType]
+    field :student, StudentType, null: true do
+      argument :id, ID, required: true
+    end
+
+    field :students, [StudentType]
+    field :courses, [CourseType]
+
+    def student(id:)
+      ::Student.find(id)
+    end
 
     def students
       Student.all
