@@ -7,7 +7,7 @@ module Types
         field :courses, EnrollmentConnection
 
         def courses
-            object.enrollments.includes(:course)
+            object.enrollments
         end
     end
 end
