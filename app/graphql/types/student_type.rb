@@ -4,10 +4,10 @@ module Types
     class StudentType < BaseObject
         field :id, ID, null: false
         field :name, String
-        field :courses, EnrollmentConnection, connection: true
-    end
+        field :courses, EnrollmentConnection
 
-    def courses
-        object.enrollments
+        def courses
+            object.enrollments.includes(:course)
+        end
     end
 end
