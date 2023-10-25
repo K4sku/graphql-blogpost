@@ -2,8 +2,8 @@ module Types
     class EnrollmentConnection < BaseConnection
         edge_type(EnrollmentEdge)
 
+        # this method is required for 'nodes' shorthand to work
         def nodes
-            # .edge_nodes here is required for 'nodes' shorthand to work
             object.edge_nodes.map(&:course)
         end
     end
