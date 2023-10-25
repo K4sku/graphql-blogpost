@@ -1,24 +1,5 @@
-# README
+This simple app was made to demonstrate how to:
+1. Expose information from join tables on connection edges.
+2. Extend connection with `recordCount`
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
-
-Things you may want to cover:
-
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+It also shows how to change the default `pageInfo` and how to use ar_lazy_preload.
